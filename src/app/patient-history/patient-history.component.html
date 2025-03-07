@@ -1,0 +1,29 @@
+<div class="patient-history">
+  <h1>Patient History</h1>
+  
+  <section class="patient-details">
+    <h2>Patient Details</h2>
+    <p><strong>Name:</strong> {{ patient.name }}</p>
+    <p><strong>Age:</strong> {{ patient.age }}</p>
+    <p><strong>Gender:</strong> {{ patient.gender }}</p>
+    <p><strong>Contact:</strong> {{ patient.contact }}</p>
+  </section>
+  
+  <section class="medical-history">
+    <h2>Medical History</h2>
+    <p><strong>Allergies:</strong> {{ patient.allergies }}</p>
+    <p><strong>Chronic Conditions:</strong> {{ patient.chronicConditions }}</p>
+    <p><strong>Medications:</strong> {{ patient.medications }}</p>
+  </section>
+  
+  <section class="past-visits">
+    <h2>Past Visits</h2>
+    <ul>
+      <li *ngFor="let visit of patient.pastVisits">
+        <p><strong>Date:</strong> {{ visit.date }}</p>
+        <p><strong>Reason:</strong> {{ visit.reason }}</p>
+        <p><strong>Notes:</strong> {{ visit.notes }}</p>
+      </li>
+    </ul>
+  </section>
+</div>
